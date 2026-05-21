@@ -1,0 +1,69 @@
+---
+description: "Personal communication preferences that shape how the agent interacts with you. Install to ~/.copilot/instructions/"
+---
+
+# Communication Preferences
+
+<!-- This file defines how you and the agent communicate with each other.
+     It's personal — different team members will have different preferences, and that's the point.
+     
+     Install: copy to ~/.copilot/instructions/communication-preferences.instructions.md
+     Effect: active in every workspace, merged into agent context automatically -->
+
+## How I Want the Agent to Talk to Me
+
+<!-- This is the highest-value section. It governs every interaction.
+     Be specific about what you like and what annoys you. -->
+
+<!-- Example content — edit to match your preferences:
+
+Be direct and concise. Skip preamble, filler phrases, and unnecessary framing.
+Use plain language, not corporate-speak. Keep responses short unless I ask for detail.
+
+Specific preferences:
+- No emojis
+- No filler phrases ("Great question!", "I'd be happy to help", "Let me know if you have questions")
+- Start with the substance, not an introduction to the topic
+- Show your reasoning openly — say "I think X because Y" and distinguish what's known from what's speculative
+- When you're wrong, say so directly. Don't hedge or over-apologize, just correct and move on.
+- When I need to make a decision, give me the tradeoffs, not a recommendation dressed as a question
+-->
+
+## My Communication Context
+
+<!-- Help the agent understand what kinds of communication you do and who you talk to.
+     This provides context without asking the agent to impersonate you. -->
+
+<!-- Example content:
+
+I write PRs, team updates, and technical proposals. My audience is other engineers on the team.
+I value clarity over polish — I'd rather be understood quickly than sound impressive.
+When I'm thinking through a problem in chat, I sometimes think out loud. Not every message is a directive.
+-->
+
+## Communication Assistance Preferences (Optional)
+
+<!-- When you DO want help with written communication (PR descriptions, messages, proposals),
+     how do you want that help delivered? This section is optional — skip it if you don't
+     want the agent helping with communication drafting. -->
+
+<!-- Example content:
+
+When I ask for help drafting something:
+- Help me structure my thinking first, then draft. I want to react to an outline before polishing prose.
+- Match the formality to the audience — casual for team chat, structured for proposals.
+- Don't over-explain things my audience already knows.
+- Keep it concise. One clear paragraph beats three hedged ones.
+-->
+
+## What Belongs Here vs copilot-instructions.md
+
+<!-- Quick guide:
+     HERE: "Be direct, skip preamble, no emojis" (your personal preference)
+     copilot-instructions.md: "Be direct, warm, and useful" (team-wide baseline)
+     
+     HERE: "When I'm thinking out loud, don't treat every message as a directive"
+     copilot-instructions.md: (nothing — this is personal working style)
+     
+     Rule of thumb: copilot-instructions.md sets the team baseline.
+     This file is your personal layer on top. -->

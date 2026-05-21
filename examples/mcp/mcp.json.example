@@ -1,0 +1,54 @@
+{
+	// MCP Server Configuration
+	// Copy this file to .vscode/mcp.json in your project root.
+	// Remove or comment out servers you don't need — each is independent.
+	// After editing, restart VS Code for changes to take effect.
+
+	"servers": {
+
+		// ── context7: Library documentation lookup ──────────────────────
+		// Sends only library names and queries externally. Never sends source code.
+		// Requires: Node.js/npx, CONTEXT7_API_KEY env var
+		"context7": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@upstash/context7-mcp",
+				"--api-key",
+				"${env:CONTEXT7_API_KEY}"
+			],
+			"type": "stdio"
+
+			// ── Corporate proxy (uncomment if behind a proxy) ──────────
+			// "env": {
+			// 	"HTTP_PROXY": "http://your.proxy:port",
+			// 	"HTTPS_PROXY": "http://your.proxy:port",
+			// 	"NO_PROXY": "localhost,127.0.0.1,::1,host.docker.internal",
+			// 	"NODE_EXTRA_CA_CERTS": "/path/to/your/ca-bundle.pem",
+			// 	"NPM_CONFIG_CAFILE": "/path/to/your/ca-bundle.pem"
+			// }
+		},
+
+		// ── CodeGraphContext: Structural code analysis ──────────────────
+		// Fully local. Requires Neo4j container + cgc CLI.
+		// See examples/mcp/docker-compose.neo4j.yaml for the Neo4j container.
+		// Requires: pip install codegraphcontext, then cgc build <project>
+		"CodeGraphContext": {
+			"command": "cgc",
+			"args": ["mcp", "start"],
+			"env": {
+				"NEO4J_URI": "bolt://localhost:8687",
+				"NEO4J_USERNAME": "neo4j",
+				"NEO4J_PASSWORD": "your-password-here"
+			},
+			"type": "stdio"
+		}
+
+		// ── your corporate MCP (your organization only) ───────────────────────────────────
+		// Skip entirely if not on your organization network.
+		// Install from the ATT your corporate MCP setup page, then authenticate
+		// via VS Code Copilot settings → MCP Servers → your corporate MCP.
+		// No mcp.json entry needed — your corporate MCP installs its own config.
+	},
+	"inputs": []
+}

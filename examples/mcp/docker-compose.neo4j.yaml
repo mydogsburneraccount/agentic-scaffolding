@@ -1,0 +1,17 @@
+# Neo4j container for CodeGraphContext
+# Usage: docker compose -f examples/mcp/docker-compose.neo4j.yaml up -d
+
+services:
+  neo4j-cgc:
+    image: neo4j:5-community
+    container_name: neo4j-cgc
+    ports:
+      - "8687:7687"   # Bolt protocol (non-default port to avoid conflicts)
+      - "8474:7474"   # Browser UI (optional, access at http://localhost:8474)
+    environment:
+      - NEO4J_AUTH=neo4j/your-password-here
+    volumes:
+      - neo4j-cgc-data:/data
+
+volumes:
+  neo4j-cgc-data:

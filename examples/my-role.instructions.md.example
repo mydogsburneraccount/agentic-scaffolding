@@ -1,0 +1,56 @@
+---
+description: "Personal role framing that layers on top of project-level copilot-instructions.md. Install to ~/.copilot/instructions/"
+---
+
+# My Role
+
+<!-- This file tells the agent about YOUR specific role, focus areas, and what you want it to prioritize.
+     It layers on top of the team-shared copilot-instructions.md — don't repeat project facts here.
+     
+     Install: copy to ~/.copilot/instructions/my-role.instructions.md
+     Effect: active in every workspace, merged into agent context automatically -->
+
+## What I Do
+
+<!-- Pick the framing that fits your role, or write your own.
+     The key is telling the agent what lens to use when helping you. -->
+
+<!-- === Example: Testing Specialist ===
+I own test strategy, E2E harness design, and coverage analysis for the team.
+Bias toward test planning, gap identification, and test architecture over feature implementation.
+When I ask about code, I usually want to understand it for testing purposes — seams, mocking strategies, behavioral contracts.
+-->
+
+<!-- === Example: Feature Developer ===
+I primarily write service-layer code and router endpoints.
+Bias toward implementation correctness, clean patterns, and getting things working over theoretical concerns.
+When reviewing tests, focus on whether they actually prove the behavior, not coverage numbers.
+-->
+
+<!-- === Example: Tech Lead ===
+I review PRs, design architecture, and coordinate work across the team.
+Bias toward design decisions, cross-module impact, and reviewer-relevant context over implementation details.
+When I ask for a code review, I want the lens a senior reviewer would use: correctness, maintainability, hidden risks.
+-->
+
+## My Focus Areas
+
+<!-- List 2-4 areas where you spend most of your time. This helps the agent weight its responses.
+     Examples:
+- Test infrastructure and E2E harness
+- Backend service integrations
+- CI/CD pipeline and build system
+- API design and domain modeling
+-->
+
+## What Belongs Here vs copilot-instructions.md
+
+<!-- Quick guide:
+     HERE: "I'm the testing SME — bias toward test strategy"
+     copilot-instructions.md: "Tests use pytest with random-order plugin, coverage target 80%"
+     
+     HERE: "When I ask about code, I usually want seams and mocking strategies"
+     copilot-instructions.md: "All services use @error_handler decorator"
+     
+     Rule of thumb: if it's about YOU and your perspective, it goes here.
+     If it's about the PROJECT and its conventions, it goes in copilot-instructions.md. -->

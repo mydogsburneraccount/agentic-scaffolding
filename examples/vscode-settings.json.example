@@ -1,0 +1,25 @@
+{
+    // VS Code settings for Copilot prompt discovery.
+    // Add this to .vscode/settings.json in your workspace root.
+    // This tells VS Code where to find prompt files that become /commands in Copilot Chat.
+
+    "chat.promptFilesLocations": [
+        // Repo-level prompts (project-specific)
+        {
+            "path": ".github/prompts"
+        },
+        // User-level prompts (portable across workspaces)
+        // macOS:
+        {
+            "path": "~/Library/Application Support/Code/User/prompts"
+        }
+        // Linux:
+        // {
+        //     "path": "~/.config/Code/User/prompts"
+        // }
+        // Windows:
+        // {
+        //     "path": "%APPDATA%/Code/User/prompts"
+        // }
+    ]
+}
